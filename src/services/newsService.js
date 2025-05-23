@@ -1,7 +1,11 @@
 import axios from 'axios';
 
 // Get the API endpoint from environment variables
+// This will be updated to point to your deployed backend API
 const API_BASE = process.env.REACT_APP_API_ENDPOINT || 'http://localhost:3001/api/news';
+
+// When you deploy the backend to Vercel, update your .env file with:
+// REACT_APP_API_ENDPOINT=https://your-backend-api-url.vercel.app/api/news
 
 /**
  * Fetches all news headlines from the configured API endpoint

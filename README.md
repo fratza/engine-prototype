@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# engine-prototype
-Engine which assembless image and text into a news headline image
-=======
 # News Headline App
 
 This application displays news headlines with images as backgrounds. It fetches data from an API endpoint and displays the headlines with their corresponding images.
@@ -42,4 +38,3 @@ REACT_APP_DEFAULT_IMAGE_KEY=path/to/default/image.jpg
 ## Usage
 
 The application will automatically fetch and display news headlines from the configured API endpoint. If the API response doesn't include image URLs for certain headlines, the app will fetch images from the configured S3 bucket.
->>>>>>> ffa69f0 (initial)
