@@ -24,12 +24,6 @@ const Header = styled.header`
   z-index: 10;
 `;
 
-const Title = styled.h1`
-  color: #fff;
-  font-size: 2.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-`;
-
 const HeadlineContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -96,8 +90,6 @@ function App() {
 
   return (
     <AppContainer>
-      <Header>{/* <Title>Today's Headline</Title> */}</Header>
-
       {loading && <LoadingMessage>Loading headline...</LoadingMessage>}
 
       {error && <ErrorMessage>{error}</ErrorMessage>}
