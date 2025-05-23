@@ -15,15 +15,6 @@ const AppContainer = styled.div`
   background-color: #000;
 `;
 
-const Header = styled.header`
-  position: absolute;
-  top: 20px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
-`;
-
 const HeadlineContainer = styled.div`
   width: 100%;
   height: 100%;
