@@ -23,4 +23,4 @@ services:
           name: news-headline-api
           type: web
           envVarKey: RENDER_EXTERNAL_URL
-        value: /api/news
+          suffix: /api/news
