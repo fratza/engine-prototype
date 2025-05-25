@@ -3,6 +3,28 @@ import styled from 'styled-components';
 import FallbackImage from './FallbackImage';
 import QRCode from './QRCode';
 
+// Device breakpoints
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+};
+
+// Media queries
+const device = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+};
+
 const HeadlineCard = styled.div`
   position: relative;
   width: 100%;
@@ -31,6 +53,14 @@ const HeadlineContent = styled.div`
   display: flex;
   justify-content: center;
   padding: 30px;
+  
+  @media ${device.tablet} {
+    padding: 20px;
+  }
+  
+  @media ${device.mobileL} {
+    padding: 15px;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -41,6 +71,18 @@ const TitleContainer = styled.div`
   max-width: 90%;
   width: auto;
   margin-bottom: 20px;
+  
+  @media ${device.tablet} {
+    padding: 12px 20px;
+    max-width: 95%;
+  }
+  
+  @media ${device.mobileL} {
+    padding: 10px 15px;
+    max-width: 100%;
+    margin-bottom: 10px;
+    border-width: 1px;
+  }
 `;
 
 const HeadlineTitle = styled.h2`
@@ -49,6 +91,22 @@ const HeadlineTitle = styled.h2`
   margin: 0;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  
+  @media ${device.laptop} {
+    font-size: 2rem;
+  }
+  
+  @media ${device.tablet} {
+    font-size: 1.8rem;
+  }
+  
+  @media ${device.mobileL} {
+    font-size: 1.4rem;
+  }
+  
+  @media ${device.mobileS} {
+    font-size: 1.2rem;
+  }
 `;
 
 const HeadlineContainer = styled.div`
