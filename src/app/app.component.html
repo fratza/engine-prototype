@@ -1,0 +1,30 @@
+<div class="app-container">
+  <div *ngIf="loading" class="loading-container">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading headline...</div>
+  </div>
+
+  <div *ngIf="error" class="error-container">
+    <div class="error-message">{{ error }}</div>
+    <button class="retry-button" (click)="loadRandomHeadline()">Try Again</button>
+  </div>
+
+  <div *ngIf="!loading && !error && headline" class="headline-container">
+    <!-- Background image that covers the full screen -->
+    <div class="background-image" [style.background-image]="headline.imageUrl ? 'url(' + headline.imageUrl + ')' : ''"></div>
+    
+    <!-- Gradient overlay to make text readable -->
+    <div class="gradient-overlay"></div>
+    
+    <!-- Content container -->
+    <div class="content-container">
+      <h1 class="headline-title">{{ headline.title }}</h1>
+      
+      <!-- QR code for the article URL -->
+      <div class="qr-code-container" *ngIf="headline.url">
+        <img [src]="'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=' + headline.url" alt="QR Code" class="qr-code" />
+        <div class="qr-label">Scan to read full article</div>
+      </div>
+    </div>
+  </div>
+</div>

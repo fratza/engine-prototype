@@ -1,0 +1,15 @@
+<div class="headline-card">
+  <div class="headline-container">
+    <div *ngIf="imageUrl; else fallbackImage" class="background-image" [style.background-image]="'url(' + imageUrl + ')'"></div>
+    <ng-template #fallbackImage>
+      <app-fallback-image></app-fallback-image>
+    </ng-template>
+    <div class="headline-content">
+      <div class="title-container">
+        <h2 class="headline-title">{{ title }}</h2>
+      </div>
+    </div>
+  </div>
+  <!-- QR code in the bottom right -->
+  <app-qr-code [url]="url"></app-qr-code>
+</div>
